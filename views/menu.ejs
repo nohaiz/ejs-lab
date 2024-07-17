@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+</head>
+<body>
+    <h1>Full Menu</h1>
+    <%- include('partials/nav.ejs') %>
+    <h2>Mains</h2>    
+    <% menu.forEach((item) => { %>
+        <% if (item.category.toLowerCase() === 'mains') { %>
+        <ul>
+            <li><strong>Name: </strong><%=item.name%></li>
+            <li><strong>Price: </strong><%=item.price%></li>
+            <li><strong>Rating: </strong><%=item.rating%></li>
+            <li><strong>Details: </strong><%=item.details%></li>
+        </ul>
+        <% } %>
+    <% }) %>
+    <h2>Desserts</h2>
+    <% menu.forEach((item) => { %>
+        <% if (item.category.toLowerCase() === 'desserts') { %>
+        <ul>
+            <li><strong>Name: </strong><%=item.name%></li>
+            <li><strong>Price: </strong><%=item.price%></li>
+            <li><strong>Rating: </strong><%=item.rating%></li>
+            <li><strong>Details: </strong><%=item.details%></li>
+        </ul>
+        <% } %>
+    <% }) %>
+    <h2>Sides</h2>
+    <% menu.forEach((item) => { %>
+        <% if (item.category.toLowerCase() === 'sides') { %>
+        <ul>
+            <li><strong>Name: </strong><%=item.name%></li>
+            <li><strong>Price: </strong><%=item.price%></li>
+            <li><strong>Rating: </strong><%=item.rating%></li>
+            <li><strong>Details: </strong><%=item.details%></li>
+        </ul>
+        <% } %>
+    <% }) %>
+
+</body>
+</html>
